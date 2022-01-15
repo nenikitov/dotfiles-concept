@@ -10,14 +10,16 @@ const elements = {
     rofi: true,
     clients: true
 }
-const apps = {
-    visible: [
-        alacrittyApp
+const apps = [
+    [
+        alacrittyApp,
     ],
-    minimized: [
-        alacrittyApp
+    [
+        alacrittyApp,
+        alacrittyApp,
+        alacrittyApp,
     ]
-}
+]
 
 function init() {
     ReactDOM.render(
