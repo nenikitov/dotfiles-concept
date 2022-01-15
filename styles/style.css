@@ -1,0 +1,14 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 100%;
+    max-height: 99vh;
+    height: auto;
+}
+.wallpaper {
+    max-width: 100%;
+    max-height: 99vh;
+}

@@ -1,0 +1,40 @@
+:root {
+    --term-raw-primary-background: 8,   8,   8;
+    --term-raw-primary-foreground: 204, 204, 204;
+    --term-raw-normal-black:       58,  58,  58;
+    --term-raw-normal-red:         179, 52,  67;
+    --term-raw-normal-green:       127, 145, 42;
+    --term-raw-normal-yellow:      185, 120, 69;
+    --term-raw-normal-blue:        66,  115, 159;
+    --term-raw-normal-magenta:     140, 90,  162;
+    --term-raw-normal-cyan:        90,  167, 157;
+    --term-raw-normal-white:       176, 176, 176;
+    --term-raw-bright-black:       90,  90,  90;
+    --term-raw-bright-red:         255, 117, 135;
+    --term-raw-bright-green:       208, 225, 113;
+    --term-raw-bright-yellow:      242, 178, 134;
+    --term-raw-bright-blue:        135, 189, 229;
+    --term-raw-bright-magenta:     208, 156, 227;
+    --term-raw-bright-cyan:        159, 236, 227;
+    --term-raw-bright-white:       255, 255, 255;
+
+
+    --term-primary-background: rgb(var(--term-raw-primary-background));
+    --term-primary-foreground: rgb(var(--term-raw-primary-foreground));
+    --term-normal-black:       rgb(var(--term-raw-normal-black));
+    --term-normal-red:         rgb(var(--term-raw-normal-red));
+    --term-normal-green:       rgb(var(--term-raw-normal-green));
+    --term-normal-yellow:      rgb(var(--term-raw-normal-yellow));
+    --term-normal-blue:        rgb(var(--term-raw-normal-blue));
+    --term-normal-magenta:     rgb(var(--term-raw-normal-magenta));
+    --term-normal-cyan:        rgb(var(--term-raw-normal-cyan));
+    --term-normal-white:       rgb(var(--term-raw-normal-white));
+    --term-bright-black:       rgb(var(--term-raw-bright-black));
+    --term-bright-red:         rgb(var(--term-raw-bright-red));
+    --term-bright-green:       rgb(var(--term-raw-bright-green));
+    --term-bright-yellow:      rgb(var(--term-raw-bright-yellow));
+    --term-bright-blue:        rgb(var(--term-raw-bright-blue));
+    --term-bright-magenta:     rgb(var(--term-raw-bright-magenta));
+    --term-bright-cyan:        rgb(var(--term-raw-bright-cyan));
+    --term-bright-white:       rgb(var(--term-raw-bright-white));
+}

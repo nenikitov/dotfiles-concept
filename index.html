@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Desktop</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/color-scheme.css"></link>
+    <link rel="stylesheet" href="styles/alacritty.css"></link>
+    <link rel="stylesheet" href="styles/style.css"></link>
+
+    <!-- Libraries -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Modules -->
+    <script
+        src="scripts/utils/application.jsx" type="text/babel"
+        data-type="module" data-plugins="transform-modules-umd"
+        data-presets="react"></script>
+    <script
+        src="scripts/apps/alacritty.jsx" type="text/babel"
+        data-type="module" data-plugins="transform-modules-umd"
+        data-presets="react"></script>
+    <!-- Scripts -->
+    <script src="scripts/main.jsx" type="text/babel" data-type="module" data-plugins="transform-modules-umd" data-presets="react"></script>
+</head>
+<body>
+    <main>
+    </main>
+</body>
+</html>
