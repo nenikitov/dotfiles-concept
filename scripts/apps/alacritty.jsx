@@ -121,7 +121,7 @@ class AlacrittyElement extends React.Component {
 
     render() {
         return (
-            <article className='window alacritty'>
+            <article className='alacritty'>
                 <p>[user@host ~]$ neofetch</p>
                 <Neofetch/>
                 <p>[user@host ~]$ &#x2588;</p>

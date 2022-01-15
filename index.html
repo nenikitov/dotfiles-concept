@@ -9,6 +9,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/style.css"></link>
     <link rel="stylesheet" href="styles/desktop.css"></link>
+    <link rel="stylesheet" href="styles/client-layout.css"></link>
     <link rel="stylesheet" href="styles/variables.css"></link>
     <link rel="stylesheet" href="styles/alacritty.css"></link>
 
@@ -25,8 +26,16 @@
         src="scripts/apps/alacritty.jsx" type="text/babel"
         data-type="module" data-plugins="transform-modules-umd"
         data-presets="react"></script>
-        <script
-        src="scripts/desktop.jsx" type="text/babel"
+    <script
+        src="scripts/desktop/status-bar.jsx" type="text/babel"
+        data-type="module" data-plugins="transform-modules-umd"
+        data-presets="react"></script>
+    <script
+        src="scripts/desktop/client-layout.jsx" type="text/babel"
+        data-type="module" data-plugins="transform-modules-umd"
+        data-presets="react"></script>
+    <script
+        src="scripts/desktop/desktop.jsx" type="text/babel"
         data-type="module" data-plugins="transform-modules-umd"
         data-presets="react"></script>
     <!-- Scripts -->
