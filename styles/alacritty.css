@@ -1,11 +1,12 @@
 /* Main window */
-.alacritty-window {
+.alacritty {
     white-space: pre;
     font-family: 'mononoki', monospace;
     color: var(--term-primary-foreground);
-    background-color: rgba(var(--term-raw-primary-background), 0.85);;
+    background-color: rgba(var(--term-raw-primary-background), 0.85);
+    padding: 0.5em;
 }
-.alacritty-window * {
+.alacritty * {
     padding: 0;
     margin: 0;
 }

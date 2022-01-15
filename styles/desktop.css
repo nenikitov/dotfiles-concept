@@ -1,0 +1,32 @@
+/*
+.desktop {
+    max-width: 100%;
+    max-height: 100%;
+}
+.desktop > * {
+    grid-row: 1;
+    grid-column: 1;
+}
+*/
+.desktop img {
+    max-width: 100%;
+    max-height: 99vh;
+    width: auto;
+    margin: auto;
+}
+
+.window {
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 25px #000;
+    min-width: none;
+    min-width: none;
+    overflow: hidden;
+}
+
+.visible-clients {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+}

@@ -1,12 +1,3 @@
-export let ApplicationProperty = {
-    STICKY      : { display: '▪' },
-    MINIMIZED   : { display: '⌃' },
-    FLOATING    : { display: '✈' },
-    MAXIMIZED   : { display: '+' },
-    MAXIMIZED_H : { display: '⬌' },
-    MAXIMIZED_V : { display: '⬍' },
-}
-
 export class Application {
     icon;
     name;

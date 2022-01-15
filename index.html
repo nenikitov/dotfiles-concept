@@ -7,9 +7,10 @@
     <!-- Title -->
     <title>Desktop</title>
     <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/style.css"></link>
+    <link rel="stylesheet" href="styles/desktop.css"></link>
     <link rel="stylesheet" href="styles/color-scheme.css"></link>
     <link rel="stylesheet" href="styles/alacritty.css"></link>
-    <link rel="stylesheet" href="styles/style.css"></link>
 
     <!-- Libraries -->
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
@@ -24,11 +25,14 @@
         src="scripts/apps/alacritty.jsx" type="text/babel"
         data-type="module" data-plugins="transform-modules-umd"
         data-presets="react"></script>
+        <script
+        src="scripts/desktop.jsx" type="text/babel"
+        data-type="module" data-plugins="transform-modules-umd"
+        data-presets="react"></script>
     <!-- Scripts -->
     <script src="scripts/main.jsx" type="text/babel" data-type="module" data-plugins="transform-modules-umd" data-presets="react"></script>
 </head>
 <body>
-    <main>
-    </main>
+    <main></main>
 </body>
 </html>

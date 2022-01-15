@@ -1,4 +1,4 @@
-import { ApplicationProperty, Application } from '../utils/application.jsx';
+import { Application } from '../utils/application.jsx';
 
 class NeofetchLogo extends React.Component {
     constructor(props) {
@@ -121,7 +121,7 @@ class AlacrittyElement extends React.Component {
 
     render() {
         return (
-            <article className='window alacritty-window'>
+            <article className='window alacritty'>
                 <p>[user@host ~]$ neofetch</p>
                 <Neofetch/>
                 <p>[user@host ~]$ &#x2588;</p>
@@ -133,6 +133,6 @@ class AlacrittyElement extends React.Component {
 export let alacrittyApp = new Application(
     './resources/icons/alacritty.svg',
     'Alacritty',
-    [ ApplicationProperty.MINIMIZED ],
+    [ ],
     <AlacrittyElement />
 )
