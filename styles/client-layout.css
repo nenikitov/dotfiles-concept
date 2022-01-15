@@ -1,4 +1,4 @@
-/* #region Clients */
+/* #region Layout */
 .client-layout {
     /* Layout (respects gaps) */
     width: calc(100% - 2 * var(--window-gap));
@@ -23,7 +23,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: stretch;
-    gap:  var(--window-gap);
+    gap: var(--window-gap);
 }
 .client-column > * {
     /* Layout (occupies as much space as possible) */
@@ -34,7 +34,8 @@
 }
 /* #endregion */
 
-/* #region Client */
+
+/* #region Client container */
 .client {
     /* Layout */
     width: auto;
@@ -44,16 +45,72 @@
 
     /* Borders */
     border-radius: var(--window-radius);
-    border: 2px solid black;
+    border: var(--border-outside) solid black;
     box-shadow:
-        inset 0px  1px  0 rgba(var(--term-raw-bright-white), 0.2),
-        inset 1px  1px  0 rgba(var(--term-raw-bright-white), 0.05),
-        inset -1px -1px 0 rgba(var(--term-raw-bright-white), 0.05);
+        inset
+            0px
+            var(--border-inside)
+            0
+            rgba(var(--term-raw-bright-white), 1),
+        inset
+            var(--border-inside)
+            var(--border-inside)
+            0
+            rgba(var(--term-raw-bright-white), 0.1),
+        inset
+            calc(-1 * var(--border-inside))
+            calc(-1 * var(--border-inside))
+            0
+            rgba(var(--term-raw-bright-white), 0.1);
+}
+/* #endregion */
+
+
+/* #region Title bar */
+.client-title-bar {
+    padding: 0.1em 0.25em;
+    display: flex;
+    align-items: stretch;
+    background-color: rgba(var(--term-raw-primary-background), var(--term-raw-opacity));
+}
+.client-title-bar * {
+    display: inline;
+    margin: auto;
+    vertical-align: middle;
+}
+.title-bar-left {
+    flex: 1;
+}
+.title-bar-center {
+    text-align: center;
+}
+.title-bar-right {
+    flex: 1;
+    text-align: right;
+}
+.client-icon {
+    height: 1.25em;
+}
+.circle {
+    border: 1px solid red;
+    border-radius: 100%;
+    height: 0.75em;
+    margin-left: 0.25em;
+}
+.client-name {
+    color: var(--term-primary-foreground);
+}
+/* #endregion */
+
+
+/* #region Client contents */
+.client-contents {
+    height: 100%;
 }
 .client-contents > * {
     height: 100%;
 }
-.window::before {
+.client::before {
     /* Content */
     content: '';
 
@@ -66,12 +123,12 @@
 
     /* Border */
     border-radius: var(--window-radius);
-    border-width: 1px;
+    border-width: var(--border-inside);
     border-style: solid;
     border-image:
         linear-gradient(
             to bottom,
-            rgba(var(--term-raw-bright-white), 0.2),
+            rgba(var(--term-raw-bright-white), 0.25) 0%,
             rgba(0, 0, 0, 0) 25%
         ) 1 50%;
   }

@@ -46,5 +46,7 @@
     --useless-gap: 3px;
     --window-gap: calc(var(--useless-gap) * 2);
     --window-radius: 8px;
+    --border-outside: 2px;
+    --border-inside: 1px;
     /* #endregion */
 }

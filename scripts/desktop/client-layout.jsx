@@ -6,9 +6,26 @@ class TitleBar extends React.Component {
     render() {
         return (
             <section className='client-title-bar'>
-                <p>Titlebar</p>
+                <section className='title-bar-left'>
+                    <img src={this.props.client.icon} className='client-icon' alt={this.props.client.name} />
+                </section>
+                <section className='title-bar-center'>
+                    <p className='client-name'>{this.props.client.name}</p>
+                </section>
+                <section className='title-bar-right'>
+                    <img src='resources/other/square.png' className='circle close'/>
+                    <img src='resources/other/square.png' className='circle close'/>
+                    <img src='resources/other/square.png' className='circle close'/>
+                    <img src='resources/other/square.png' className='circle close'/>
+                </section>
             </section>
         );
+        /*
+        <div className='circle floating'/>
+                    <div className='circle on-top'/>
+                    <div className='circle minimize'/>
+                    <div className='circle maximize'/>
+        */
     }
 }
 class Contents extends React.Component {
