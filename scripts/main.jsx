@@ -17,7 +17,6 @@ const apps = [
     [
         alacrittyApp,
         alacrittyApp,
-        alacrittyApp,
     ]
 ]
 

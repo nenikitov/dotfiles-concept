@@ -1,4 +1,6 @@
 :root {
+    /* #region Raw values of terminal colors to mix with transparency */
+    --term-raw-opacity:            0.85;
     --term-raw-primary-background: 8,   8,   8;
     --term-raw-primary-foreground: 204, 204, 204;
     --term-raw-normal-black:       58,  58,  58;
@@ -17,7 +19,9 @@
     --term-raw-bright-magenta:     208, 156, 227;
     --term-raw-bright-cyan:        159, 236, 227;
     --term-raw-bright-white:       255, 255, 255;
+    /* #endregion */
 
+    /* #region Transformed fully opaque terminal colors */
     --term-primary-background: rgb(var(--term-raw-primary-background));
     --term-primary-foreground: rgb(var(--term-raw-primary-foreground));
     --term-normal-black:       rgb(var(--term-raw-normal-black));
@@ -36,8 +40,11 @@
     --term-bright-magenta:     rgb(var(--term-raw-bright-magenta));
     --term-bright-cyan:        rgb(var(--term-raw-bright-cyan));
     --term-bright-white:       rgb(var(--term-raw-bright-white));
+    /* #endregion */
 
-
+    /* #region Other properties */
     --useless-gap: 3px;
     --window-gap: calc(var(--useless-gap) * 2);
+    --window-radius: 8px;
+    /* #endregion */
 }

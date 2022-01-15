@@ -1,24 +1,37 @@
-/* Main window */
+/* #region Main window */
 .alacritty {
-    white-space: pre;
-    font-family: 'mononoki', monospace;
+    /* Main colors */
     color: var(--term-primary-foreground);
-    background-color: rgba(var(--term-raw-primary-background), 0.85);
+    background-color: rgba(var(--term-raw-primary-background), var(--term-raw-opacity));
+
+    /* Font */
+    font-family: 'mononoki', monospace;
+
+    /* Layout */
     padding: 0.5em;
+    white-space: pre;
 }
 .alacritty * {
-    padding: 0;
+    /* Layout */
     margin: 0;
+    padding: 0;
 }
 .neofetch {
+    /* Flex */
     display: flex;
 }
-/* Logo */
+/* #endregion */
+
+
+/* #region Logo */
 .neofetch .neofetch-logo {
     font-weight: bold;
     color: var(--term-normal-cyan);
 }
-/* Status */
+/* #endregion */
+
+
+/* #region Status */
 .neofetch-status .host-name {
     color: var(--term-normal-blue);
     font-weight: bold;
@@ -30,3 +43,4 @@
     color: var(--term-normal-cyan);
     font-weight: bold;
 }
+/* #endregion */

@@ -1,62 +1,102 @@
+/* #region Desktop container */
 .desktop {
     position: relative;
 }
-.contents {
-    position: absolute;
-    left: 0;
-    top: 0;
-
-    width: 100%;
-    height: 99.5%;
-
-    display: flex;
-    flex-direction: column;
-}
 .desktop img {
+    /* Layout (takes as much space as possible while maintaining aspect ratio) */
     max-width: 100%;
     max-height: 99.5vh;
     width: auto;
     height: auto;
 }
+.contents {
+    /* Layout (can be placed on top of the wallpaper) */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99.5%;
 
-.window {
-    backdrop-filter: blur(25px);
-    box-shadow: 0px 0px 25px #000;
+    /* Flex (places bars and windows automatically) */
+    display: flex;
+    flex-direction: column;
 }
+/* #endregion */
 
 
+/* #region Clients */
 .visible-clients {
+    /* Layout (respects gaps) */
+    width: calc(100% - 2 * var(--window-gap));
+    height: calc(100% - 2 * var(--window-gap));
+    margin: var(--window-gap);
+    overflow: hidden;
+
+    /* Flex (places columns of clients) */
     display: flex;
     justify-content: space-around;
     align-items: stretch;
-
-    width: calc(100% - 2 * var(--window-gap));
-    height: calc(100% - 2 * var(--window-gap));
-
-    gap: calc(4 * var(--window-gap));
-
-    margin: var(--window-gap);
-
-    overflow: hidden;
+    gap: var(--window-gap);
 }
-
 .client-column {
+    /* Layout (respects gaps) */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    /* Flex (places columns of clients) */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: stretch;
-
     gap:  var(--window-gap);
-
-    width: 100%;
-    height: 100%;
 }
-
 .client-column > * {
+    /* Layout (occupies as much space as possible) */
     width: 100%;
     height: 100%;
-
-    overflow: hidden;
-
     margin: 0;
+    overflow: hidden;
 }
+/* #endregion */
+
+
+/* #region Window effects */
+.window {
+    /* Layout */
+    width: auto;
+
+    /* Background blur */
+    backdrop-filter: blur(25px);
+
+    /* Borders */
+    border-radius: var(--window-radius);
+    border: 2px solid black;
+    box-shadow:
+        inset 0px  1px  0 rgba(var(--term-raw-bright-white), 0.2),
+        inset 1px  1px  0 rgba(var(--term-raw-bright-white), 0.05),
+        inset -1px -1px 0 rgba(var(--term-raw-bright-white), 0.05);
+}
+.window::before {
+    /* Content */
+    content: '';
+
+    /* Layout */
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    /* Border */
+    border-radius: var(--window-radius);
+    border-width: 1px;
+    border-style: solid;
+    border-image:
+        linear-gradient(
+            to bottom,
+            rgba(var(--term-raw-bright-white), 0.2),
+            rgba(0, 0, 0, 0) 25%
+        ) 1 50%;
+  }
+/* #endregion */
