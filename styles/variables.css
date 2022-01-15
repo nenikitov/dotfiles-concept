@@ -18,7 +18,6 @@
     --term-raw-bright-cyan:        159, 236, 227;
     --term-raw-bright-white:       255, 255, 255;
 
-
     --term-primary-background: rgb(var(--term-raw-primary-background));
     --term-primary-foreground: rgb(var(--term-raw-primary-foreground));
     --term-normal-black:       rgb(var(--term-raw-normal-black));
@@ -37,4 +36,8 @@
     --term-bright-magenta:     rgb(var(--term-raw-bright-magenta));
     --term-bright-cyan:        rgb(var(--term-raw-bright-cyan));
     --term-bright-white:       rgb(var(--term-raw-bright-white));
+
+
+    --useless-gap: 3px;
+    --window-gap: calc(var(--useless-gap) * 2);
 }
