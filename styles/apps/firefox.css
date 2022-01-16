@@ -6,14 +6,15 @@
     /* Main colors */
     color: var(--term-primary-foreground);
     background-color: rgba(var(--term-raw-primary-background), var(--term-raw-opacity));
-    
+
     /* Layout */
     padding: 0.5em;
+    overflow: hidden;
 
     /* Flex */
     display: flex;
     flex-direction: column;
-    gap: 0.25em;
+    gap: 0.5em;
 }
 /* #endregion */
 
@@ -32,6 +33,7 @@
     width: 1.5em;
     text-align: center;
     margin: auto 0;
+    margin-left: 0.75em;
     padding: 0.25em;
 
     /* Border */
@@ -79,22 +81,81 @@
 /* #endregion */
 
 
-/* #region Tab bar */
+/* #region Search bar */
 .search-bar {
+    /* Flex */
     display: flex;
     gap: 1em;
 }
 .search-bar > section {
-    display: flex;
-    padding: 0.25em 0.5em;
-    gap: 1em;
+    /* Main colors */
     background-color: var(--term-normal-black);
+
+    /* Layout */
+    padding: 0.25em 0.5em;
+
+    /* Flex */
+    display: flex;
+    gap: 1em;
+
+    /* Border */
     border-radius: var(--window-radius);
 }
 .search-bar > section p {
     margin: auto 0;
 }
 .search-bar .search-bar-center {
+    color: var(--term-bright-white);
     width: 100%;
+}
+/* #endregion */
+
+/* #region Home page */
+.home-page {
+    /* Main colors */
+    background-color: var(--term-primary-background);
+
+    /* Layout */
+    padding-top: 5em;
+    margin-bottom: 2.75em;
+
+    /* Flex */
+    display: flex;
+    flex: 1;
+    gap: 1em;
+    flex-direction: column;
+    align-items: stretch;
+
+    /* Border */
+    border-radius: var(--window-radius);
+}
+.home-page * {
+    margin: 0 auto;
+}
+.home-firefox-logo {
+    display: flex;
+}
+.home-firefox-logo .firefox-icon {
+    height: 5em;
+}
+.home-firefox-logo .firefox-name {
+    /* Font */
+    font-size: 2.5em;
+    font-weight: bold;
+
+    /* Layout */
+    margin: auto 0;
+}
+.home-search-bar {
+    /* Main colors */
+    color: var(--term-bright-white);
+    background-color: var(--term-normal-black);
+
+    /* Layout */
+    width: 60%;
+    padding: 0.5em;
+
+    /* Border */
+    border-radius: var(--window-radius);
 }
 /* #endregion */

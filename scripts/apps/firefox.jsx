@@ -62,7 +62,13 @@ class HomePage extends React.Component {
     render() {
         return (
             <section className='home-page'>
-                <p>home</p>
+                <section className='home-firefox-logo'>
+                    <img src='resources/icons/firefox.svg' className='firefox-icon' alt='Firefox logo' />
+                    <p className='firefox-name'>Firefox</p>
+                </section>
+                <section className='home-search-bar'>
+                    <p>&#x1F50D;&#xFE0E; Search with DuckDuckGo or enter address</p>
+                </section>
             </section>
         );
     }
