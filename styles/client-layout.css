@@ -42,7 +42,8 @@
 
     /* Background blur */
     backdrop-filter: blur(25px);
-
+}
+.client-border {
     /* Borders */
     border-radius: var(--window-radius);
     border: var(--border-outside) solid black;
@@ -63,54 +64,7 @@
             0
             rgba(var(--term-raw-bright-white), 0.1);
 }
-/* #endregion */
-
-
-/* #region Title bar */
-.client-title-bar {
-    padding: 0.1em 0.25em;
-    display: flex;
-    align-items: stretch;
-    background-color: rgba(var(--term-raw-primary-background), var(--term-raw-opacity));
-}
-.client-title-bar * {
-    display: inline;
-    margin: auto;
-    vertical-align: middle;
-}
-.title-bar-left {
-    flex: 1;
-}
-.title-bar-center {
-    text-align: center;
-}
-.title-bar-right {
-    flex: 1;
-    text-align: right;
-}
-.client-icon {
-    height: 1.25em;
-}
-.circle {
-    border: 1px solid red;
-    border-radius: 100%;
-    height: 0.75em;
-    margin-left: 0.25em;
-}
-.client-name {
-    color: var(--term-primary-foreground);
-}
-/* #endregion */
-
-
-/* #region Client contents */
-.client-contents {
-    height: 100%;
-}
-.client-contents > * {
-    height: 100%;
-}
-.client::before {
+.client-border::before {
     /* Content */
     content: '';
 
@@ -131,5 +85,70 @@
             rgba(var(--term-raw-bright-white), 0.25) 0%,
             rgba(0, 0, 0, 0) 25%
         ) 1 50%;
-  }
+}
+/* #endregion */
+
+
+/* #region Title bar */
+.client-title-bar {
+    padding: 0.1em 0.5em;
+    display: flex;
+    align-items: stretch;
+}
+.client-title-bar * {
+    display: inline;
+    margin: auto;
+    vertical-align: middle;
+}
+.title-bar-left {
+    flex: 1;
+}
+.title-bar-center {
+    text-align: center;
+}
+.title-bar-right {
+    flex: 1;
+    text-align: right;
+}
+.client-icon {
+    height: 1.25em;
+}
+.circle {
+    border: 2px solid;
+    border-radius: 100%;
+    height: 0.7em;
+    margin-left: 0.25em;
+}
+.client-button-close {
+    border-color: var(--term-normal-red);
+}
+.client-button-maximize {
+    border-color: var(--term-normal-green);
+}
+.client-button-minimize {
+    border-color: var(--term-normal-yellow);
+}
+.client-button-on-top {
+    border-color: var(--term-normal-blue);
+}
+.client-button-floating {
+    border-color: var(--term-normal-magenta);
+}
+.client-name {
+    color: var(--term-primary-foreground);
+}
+.client-title-bar.Alacritty {
+    background-color: rgba(var(--term-raw-primary-background), var(--term-raw-opacity));
+
+}
+/* #endregion */
+
+
+/* #region Client contents */
+.client-contents {
+    height: 100%;
+}
+.client-contents > * {
+    height: 100%;
+}
 /* #endregion */

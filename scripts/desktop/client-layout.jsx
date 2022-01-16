@@ -5,7 +5,7 @@ class TitleBar extends React.Component {
 
     render() {
         return (
-            <section className='client-title-bar'>
+            <section className={`client-title-bar ${this.props.client.name}`}>
                 <section className='title-bar-left'>
                     <img src={this.props.client.icon} className='client-icon' alt={this.props.client.name} />
                 </section>
@@ -13,19 +13,14 @@ class TitleBar extends React.Component {
                     <p className='client-name'>{this.props.client.name}</p>
                 </section>
                 <section className='title-bar-right'>
-                    <img src='resources/other/square.png' className='circle close'/>
-                    <img src='resources/other/square.png' className='circle close'/>
-                    <img src='resources/other/square.png' className='circle close'/>
-                    <img src='resources/other/square.png' className='circle close'/>
+                    <img src='resources/other/square.png' className='circle client-button-floating'/>
+                    <img src='resources/other/square.png' className='circle client-button-on-top'/>
+                    <img src='resources/other/square.png' className='circle client-button-minimize'/>
+                    <img src='resources/other/square.png' className='circle client-button-maximize'/>
+                    <img src='resources/other/square.png' className='circle client-button-close'/>
                 </section>
             </section>
         );
-        /*
-        <div className='circle floating'/>
-                    <div className='circle on-top'/>
-                    <div className='circle minimize'/>
-                    <div className='circle maximize'/>
-        */
     }
 }
 class Contents extends React.Component {
@@ -49,7 +44,7 @@ class Client extends React.Component {
 
     render() {
         return (
-            <article className='client'>
+            <article className='client client-border'>
                 <TitleBar client={this.props.client} />
                 <Contents client={this.props.client} />
             </article>
