@@ -1,0 +1,100 @@
+/* #region Main window */
+.client-title-bar.Firefox {
+    background-color: rgba(var(--term-raw-primary-background), var(--term-raw-opacity));
+}
+.firefox {
+    /* Main colors */
+    color: var(--term-primary-foreground);
+    background-color: rgba(var(--term-raw-primary-background), var(--term-raw-opacity));
+    
+    /* Layout */
+    padding: 0.5em;
+
+    /* Flex */
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+}
+/* #endregion */
+
+
+/* #region Tab bar */
+.tab-bar {
+    /* Flex */
+    display: flex;
+    gap: 0.25em;
+}
+.tab-new {
+    /* Main colors */
+    background-color: var(--term-normal-black);
+
+    /* Layout */
+    width: 1.5em;
+    text-align: center;
+    margin: auto 0;
+    padding: 0.25em;
+
+    /* Border */
+    border-radius: var(--window-radius);
+}
+.tab:first-child {
+    /* Main colors */
+    background-color: var(--term-normal-red);
+}
+.tab:first-child p {
+    /* Main colors */
+    color: var(--term-bright-white);
+}
+.tab {
+    /* Main colors */
+    background-color: var(--term-normal-black);
+
+    /* Layout */
+    width: 12em;
+    padding: 0.25em;
+
+    /* Flex */
+    display: flex;
+
+    /* Border */
+    border-radius: var(--window-radius);
+}
+.tab .tab-icon {
+    /* Layout */
+    height: 1.5em;
+    vertical-align: sub;
+    margin-right: 0.25em;
+}
+.tab p {
+    /* Layout */
+    margin: auto 0;
+}
+.tab .tab-name {
+    color: var(--term-normal-white);
+    width: 100%;
+}
+.tab .tab-close {
+    color: var(--term-primary-foreground)
+}
+/* #endregion */
+
+
+/* #region Tab bar */
+.search-bar {
+    display: flex;
+    gap: 1em;
+}
+.search-bar > section {
+    display: flex;
+    padding: 0.25em 0.5em;
+    gap: 1em;
+    background-color: var(--term-normal-black);
+    border-radius: var(--window-radius);
+}
+.search-bar > section p {
+    margin: auto 0;
+}
+.search-bar .search-bar-center {
+    width: 100%;
+}
+/* #endregion */

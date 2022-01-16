@@ -1,4 +1,7 @@
 /* #region Main window */
+.client-title-bar.Alacritty {
+    background-color: rgba(var(--term-raw-primary-background), var(--term-raw-opacity));
+}
 .alacritty {
     /* Main colors */
     color: var(--term-primary-foreground);

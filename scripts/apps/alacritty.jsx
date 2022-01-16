@@ -1,4 +1,4 @@
-import { Application } from '../utils/application.jsx';
+import { Application } from 'scripts/utils/application.jsx';
 
 class NeofetchLogo extends React.Component {
     constructor(props) {
@@ -131,8 +131,7 @@ class AlacrittyElement extends React.Component {
 }
 
 export let alacrittyApp = new Application(
-    './resources/icons/alacritty.svg',
+    'resources/icons/alacritty.svg',
     'Alacritty',
-    [ ],
     <AlacrittyElement />
-)
+);

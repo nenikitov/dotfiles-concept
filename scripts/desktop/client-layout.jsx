@@ -5,7 +5,7 @@ class TitleBar extends React.Component {
 
     render() {
         return (
-            <section className={`client-title-bar ${this.props.client.name}`}>
+            <section className={`client-title-bar ${this.props.client.name.replaceAll(' ', '-')}`}>
                 <section className='title-bar-left'>
                     <img src={this.props.client.icon} className='client-icon' alt={this.props.client.name} />
                 </section>
@@ -58,16 +58,16 @@ export class ClientLayout extends React.Component {
     }
 
     render() {
-        const generateClient = (client) => {
+        const generateClient = (client, index) => {
             if (client.contents) {
                 return (
-                    <Client client={client} />
+                    <Client client={client} key={index} />
                 );
             }
         };
-        const generateClientColumn = (clients) => {
+        const generateClientColumn = (clients, index) => {
             return (
-                <section className='client-column'>
+                <section className='client-column' key={index}>
                     {clients.map(generateClient)}
                 </section>
             );

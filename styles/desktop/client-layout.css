@@ -137,10 +137,6 @@
 .client-name {
     color: var(--term-primary-foreground);
 }
-.client-title-bar.Alacritty {
-    background-color: rgba(var(--term-raw-primary-background), var(--term-raw-opacity));
-
-}
 /* #endregion */
 
 

@@ -8,10 +8,11 @@
     <title>Desktop</title>
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/style.css"></link>
-    <link rel="stylesheet" href="styles/desktop.css"></link>
-    <link rel="stylesheet" href="styles/client-layout.css"></link>
+    <link rel="stylesheet" href="styles/desktop/desktop.css"></link>
+    <link rel="stylesheet" href="styles/desktop/client-layout.css"></link>
+    <link rel="stylesheet" href="styles/apps/alacritty.css"></link>
+    <link rel="stylesheet" href="styles/apps/firefox.css"></link>
     <link rel="stylesheet" href="styles/variables.css"></link>
-    <link rel="stylesheet" href="styles/alacritty.css"></link>
 
     <!-- Libraries -->
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
@@ -24,6 +25,10 @@
         data-presets="react"></script>
     <script
         src="scripts/apps/alacritty.jsx" type="text/babel"
+        data-type="module" data-plugins="transform-modules-umd"
+        data-presets="react"></script>
+    <script
+        src="scripts/apps/firefox.jsx" type="text/babel"
         data-type="module" data-plugins="transform-modules-umd"
         data-presets="react"></script>
     <script

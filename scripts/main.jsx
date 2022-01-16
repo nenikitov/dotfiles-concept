@@ -1,6 +1,7 @@
 'use_strict';
 
 import { alacrittyApp } from 'apps/alacritty.jsx';
+import { firefoxApp } from 'apps/firefox.jsx';
 import { Desktop } from 'desktop.jsx';
 
 const wallpaper = './resources/backgrounds/Autumn.jpg';
@@ -12,7 +13,7 @@ const elements = {
 }
 const apps = [
     [
-        alacrittyApp,
+        firefoxApp,
     ],
     [
         alacrittyApp,
