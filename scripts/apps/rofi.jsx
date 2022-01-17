@@ -43,8 +43,13 @@ class AppList extends React.Component {
         );
 
         return (
-            <section className='rofi-app-list'>
-                {appElements}
+            <section className='rofi-app-list-scroll'>
+                <section className='rofi-scroll'>
+                    <div className='scroll-bar'/>
+                </section>
+                <section className='rofi-app-list'>
+                    {appElements}
+                </section>
             </section>
         );
     }

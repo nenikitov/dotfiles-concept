@@ -63,6 +63,32 @@
 
 
 /* #region App list */
+.rofi-app-list-scroll {
+    /* Flex */
+    flex: 1;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.rofi-scroll {
+    /* Main colors */
+    background-color: var(--term-normal-black);
+
+    /* Layout */
+    width: 0.5em;
+
+    /* Border */
+    border-radius: 0.5em;
+}
+.rofi-scroll .scroll-bar {
+    /* Main colors */
+    background-color: var(--term-normal-red);
+
+    /* Layout */
+    height: 85%;
+
+    /* Border */
+    border-radius: inherit;
+}
 .rofi-app-list {
     /* Grid */
     display: grid;
