@@ -7,7 +7,7 @@ class Tab extends React.Component {
 
     render() {
         return (
-            <section className='tab'>
+            <section className='firefox-tab'>
                 <img src={this.props.icon} className='tab-icon' alt={this.props.name} />
                 <p className='tab-name'>{this.props.name}</p>
                 <p className='tab-close'>&#x1F7A8;</p>
@@ -23,7 +23,7 @@ class TabBar extends React.Component {
 
     render() {
         return (
-            <section className='tab-bar'>
+            <section className='firefox-tab-bar'>
                 <Tab icon='resources/icons/firefox.svg' name='New Tab'/>
                 <Tab icon='resources/icons/firefox.svg' name='New Tab'/>
                 <p className='tab-new'>+</p>
@@ -38,7 +38,7 @@ class SearchBar extends React.Component {
 
     render() {
         return (
-            <section className='search-bar'>
+            <section className='firefox-search-bar'>
                 <section className='search-bar-left'>
                     <p>&lt;</p>
                     <p>&gt;</p>
@@ -61,7 +61,7 @@ class HomePage extends React.Component {
 
     render() {
         return (
-            <section className='home-page'>
+            <section className='firefox-home-page'>
                 <section className='home-firefox-logo'>
                     <img src='resources/icons/firefox.svg' className='firefox-icon' alt='Firefox logo' />
                     <p className='firefox-name'>Firefox</p>

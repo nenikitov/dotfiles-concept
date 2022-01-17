@@ -1,0 +1,123 @@
+/* #region Main window */
+.client-title-bar.Rofi {
+    background-color: rgba(var(--term-raw-primary-background), var(--term-raw-opacity));
+}
+.rofi {
+    /* Main colors */
+    color: var(--term-primary-foreground);
+    background-color: rgba(var(--term-raw-primary-background), var(--term-raw-opacity));
+
+    /* Font */
+    font-family: 'mononoki', monospace;
+
+    /* Layout */
+    padding: 0.5em;
+    white-space: pre;
+
+    /* Flex */
+    display: flex;
+    gap: 0.5em;
+    flex-direction: column;
+}
+.rofi * {
+    margin: 0;
+    padding: 0;
+}
+/* #endregion */
+
+
+/* #region Search bar */
+.rofi-search-bar {
+    /* Main colors */
+    color: var(--term-normal-white);
+    background-color: var(--term-normal-black);
+
+    /* Layout */
+    padding-right: 0.5em;
+
+    /* Flex */
+    display: flex;
+    gap: 0.5em;
+
+    /* Border */
+    border-radius: var(--window-radius);
+}
+.rofi-search-bar * {
+    margin: auto;
+}
+.rofi-search-bar .drun {
+    /* Main colors */
+    color: var(--term-bright-white);
+    background-color: var(--term-normal-red);
+
+    /* Layout */
+    padding: 0.5em;
+
+    /* Border */
+    border-radius: var(--window-radius);
+}
+.rofi-search-bar .search {
+    flex: 1;
+}
+/* #endregion */
+
+
+/* #region App list */
+.rofi-app-list {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);;
+    grid-auto-rows: minmax(min-content, max-content);
+    padding: 10px;
+    grid-gap: 1em;
+}
+.rofi-app {
+    display: flex;
+    flex-direction: column;
+}
+.rofi-app .app-icon {
+    height: 3.5em;
+}
+.rofi-app .app-name {
+    text-align: center;
+}
+/* #endregion */
+
+
+/* #region Modi bar */
+.rofi-modi-bar {
+    /* Main colors */
+    color: var(--term-normal-white);
+    background-color: var(--term-normal-black);
+
+    /* Layout */
+    padding-right: 0.5em;
+    margin-bottom: 2.75em;
+
+    /* Flex */
+    display: flex;
+    gap: 0.5em;
+
+    /* Border */
+    border-radius: var(--window-radius);
+}
+.rofi-modi-bar * {
+    /* Layout */
+    margin: auto;
+    text-align: center;
+
+    /* Flex */
+    flex: 1;
+}
+.rofi-modi-bar .selected {
+    /* Main colors */
+    color: var(--term-bright-white);
+    background-color: var(--term-normal-red);
+
+    /* Layout */
+    padding: 0.5em;
+
+    /* Border */
+    border-radius: var(--window-radius);
+}
+/* #endregion */
