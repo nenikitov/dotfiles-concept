@@ -14,10 +14,10 @@ const elements = {
 }
 const apps = [
     [
-        rofiApp,
+        firefoxApp,
     ],
     [
-        firefoxApp,
+        rofiApp,
         alacrittyApp,
     ]
 ]

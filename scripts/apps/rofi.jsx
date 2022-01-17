@@ -1,5 +1,5 @@
 import { Application } from 'scripts/utils/application.jsx';
-import { alacrittyApp } from 'scripts/apps/alacritty.jsx';
+import { rofiApps } from 'scripts/utils/rofiApps.jsx';
 
 class SearchBar extends React.Component {
     constructor(props) {
@@ -11,7 +11,7 @@ class SearchBar extends React.Component {
             <section className='rofi-search-bar'>
                 <p className='drun'>drun</p>
                 <p className='search'>|Search...</p>
-                <p>30</p>
+                <p>{this.props.apps.length}</p>
             </section>
         );
     }
@@ -24,7 +24,7 @@ class RofiApp extends React.Component {
     render() {
         return (
             <section className='rofi-app'>
-                <img src={this.props.app.icon} className='app-icon'/>
+                <img src={this.props.app.icon} className='app-icon' alt={this.props.app.name} />
                 <p className='app-name'>{this.props.app.name}</p>
             </section>
         );
@@ -36,30 +36,15 @@ class AppList extends React.Component {
     }
 
     render() {
+        const appElements = this.props.apps.map(
+            (app) => {
+                return <RofiApp app={app} key={app.name}/>
+            }
+        );
+
         return (
             <section className='rofi-app-list'>
-                <RofiApp app={alacrittyApp} />
-                <RofiApp app={alacrittyApp} />
-                <RofiApp app={alacrittyApp} />
-                <RofiApp app={alacrittyApp} />
-                <RofiApp app={alacrittyApp} />
-                <RofiApp app={alacrittyApp} />
-                <RofiApp app={alacrittyApp} />
-                <RofiApp app={alacrittyApp} />
-                <RofiApp app={alacrittyApp} />
-                <RofiApp app={alacrittyApp} />
-                <RofiApp app={alacrittyApp} />
-                <RofiApp app={alacrittyApp} />
-                <RofiApp app={alacrittyApp} />
-                <RofiApp app={alacrittyApp} />
-                <RofiApp app={alacrittyApp} />
-                <RofiApp app={alacrittyApp} />
-                <RofiApp app={alacrittyApp} />
-                <RofiApp app={alacrittyApp} />
-                <RofiApp app={alacrittyApp} />
-                <RofiApp app={alacrittyApp} />
-                <RofiApp app={alacrittyApp} />
-                <RofiApp app={alacrittyApp} />
+                {appElements}
             </section>
         );
     }
@@ -88,8 +73,8 @@ class RofiElement extends React.Component {
     render() {
         return (
             <article className='rofi'>
-                <SearchBar />
-                <AppList />
+                <SearchBar apps={rofiApps} />
+                <AppList apps={rofiApps} />
                 <ModiBar />
             </article>
         );

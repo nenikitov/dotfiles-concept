@@ -26,7 +26,7 @@ class TabBar extends React.Component {
             <section className='firefox-tab-bar'>
                 <Tab icon='resources/icons/firefox.svg' name='New Tab'/>
                 <Tab icon='resources/icons/firefox.svg' name='New Tab'/>
-                <p className='tab-new'>+</p>
+                <p className='firefox-tab-new'>+</p>
             </section>
         );
     }

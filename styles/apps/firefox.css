@@ -69,7 +69,7 @@
 }
 .firefox-tab p {
     /* Layout */
-    margin: auto 0;
+    margin: 0;
 }
 .firefox-tab .tab-name {
     color: var(--term-normal-white);

@@ -64,19 +64,33 @@
 
 /* #region App list */
 .rofi-app-list {
-    flex: 1;
+    /* Grid */
     display: grid;
-    grid-template-columns: repeat(6, 1fr);;
+    grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: minmax(min-content, max-content);
-    padding: 10px;
     grid-gap: 1em;
+
+    /* Flex */
+    flex: 1;
+}
+.rofi-app:first-child {
+    /* Main colors */
+    color: var(--term-bright-white);
+    background-color: var(--term-normal-red);
 }
 .rofi-app {
+    /* Flex */
     display: flex;
     flex-direction: column;
+
+    /* Border */
+    border-radius: var(--window-radius);
 }
 .rofi-app .app-icon {
+    /* Layout */
+    width: auto;
     height: 3.5em;
+    margin: auto;
 }
 .rofi-app .app-name {
     text-align: center;
