@@ -30,6 +30,15 @@ export class PreviewSettings extends React.Component {
     }
 
     render() {
+        const setWallpaper = (e) => {
+            const file = e.target.files[0];
+            const reader = new FileReader();
+            reader.onload = () => {
+                this.props.setWallpaper(reader.result);
+            }
+            reader.readAsDataURL(file);
+        }
+
         return (
             <section className='preview-settings'>
                 <button id='hide-show' onClick={() => this.setVisible(! this.state.visible)}>
@@ -83,6 +92,7 @@ export class PreviewSettings extends React.Component {
                         <input type='file'
                             id='wallpaper' name='wallpaper'
                             accept='image/png, image/jpeg'
+                            onChange={ setWallpaper }
                         />
                     </fieldset>
                 </section>
