@@ -6,6 +6,32 @@ import { alacrittyApp } from 'apps/alacritty.jsx';
 import { firefoxApp } from 'apps/firefox.jsx';
 import { rofiApp } from 'scripts/apps/rofi.jsx';
 
+const layouts = [
+    {
+        name: 'Empty',
+        clients: []
+    },
+    {
+        name: 'Full Terminal',
+        clients: [
+            [ alacrittyApp ]
+        ]
+    },
+    {
+        name: 'Firefox and terminal',
+        clients: [
+            [ firefoxApp ],
+            [ alacrittyApp ]
+        ]
+    },
+    {
+        name: 'Firefox and 2 terminals',
+        clients: [
+            [ firefoxApp ],
+            [ alacrittyApp, alacrittyApp ]
+        ]
+    }
+];
 
 export class Desktop extends React.Component {
     constructor(props) {
@@ -13,9 +39,8 @@ export class Desktop extends React.Component {
         this.state = {
             elements: {
                 panel: true,
-                titlebars: true,
                 rofi: true,
-                clients: true
+                titlebars: true
             },
             clients: [
                 [
@@ -79,14 +104,6 @@ export class Desktop extends React.Component {
                 rofiApp.contents
             : null;
 
-        const clients =
-            this.state.elements.clients ?
-            <ClientLayout
-                clients={this.state.clients}
-                titlebars={this.state.elements.titlebars}
-            />
-            : null;
-
         const panel =
             this.state.elements.panel ?
             <StatusBar />
@@ -97,13 +114,16 @@ export class Desktop extends React.Component {
                 <img src={this.state.wallpaper} className='desktop-wallpaper'></img>
                 <section className='desktop-contents-container'>
                     {panel}
-                    {clients}
+                    <ClientLayout
+                        clients={this.state.clients}
+                        titlebars={this.state.elements.titlebars}
+                    />
                 </section>
                 <section className='rofi-container client client-border'>
                     {rofi}
                 </section>
                 <section className='preview-settings-container'>
-                    <PreviewSettings />
+                    <PreviewSettings layouts={layouts}/>
                 </section>
             </article>
         );

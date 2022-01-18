@@ -1,0 +1,56 @@
+/* Main window */
+.preview-settings {
+    /* Main colors */
+    color: var(--term-primary-foreground);
+    background-color: var(--term-primary-background);
+
+    /* Font */
+    font-family: 'mononoki', monospace;
+
+    /* Layout */
+    width: fit-content;
+    padding: 0.5em;
+
+    /* Flex */
+    display: flex;
+    gap: 0.5em;
+
+    /* Border */
+    border: 2px solid var(--term-normal-red);
+    border-radius: var(--window-radius);
+}
+
+.hidden {
+    overflow: hidden;
+    width: 0;
+    height: 1em;
+}
+
+.preview-settings #settings input {
+    font-family: 'mononoki', monospace;
+}
+
+.preview-settings #settings fieldset {
+    border: 2px solid var(--term-normal-red);
+    border-radius: var(--window-radius);
+}
+.preview-settings #settings > fieldset > legend {
+    color: var(--term-bright-red);
+}
+.preview-settings #settings #wallpaper {
+    width: 6.8em;
+}
+select, button, input {
+    cursor: pointer;
+}
+
+.preview-settings #hide-show {
+    /* Main colors */
+    color: var(--term-primary-foreground);
+    background-color: var(--term-normal-black);
+
+    /* Boder */
+    border: none;
+    border-radius: var(--window-radius);
+}
+/* #endregion */

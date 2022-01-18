@@ -80,7 +80,7 @@ export class ClientLayout extends React.Component {
 
         return (
             <section className='client-layout'>
-                {this.props.clients.map(generateClientColumn)}
+                {this.props.clients?.map?.(generateClientColumn)}
             </section>
         );
     }
