@@ -10,19 +10,30 @@ export class Desktop extends React.Component {
 
     render() {
         const rofi =
-            (this.props.elements.rofi) ?
+            this.props.elements.rofi ?
             (
                 <section className='rofi-container client client-border'>
                     {rofiApp.contents}
                 </section>
-            ) : null;
+            )
+            : null;
+
+        const clients =
+            this.props.elements.clients ?
+            <ClientLayout apps={this.props.apps} enableTitleBars={this.props.elements.titlebars} />
+            : null;
+
+        const panel =
+            this.props.elements.panel ?
+            <StatusBar />
+            : null;
 
         return (
             <article className='desktop'>
                 <img src={this.props.wallpaper} className='desktop-wallpaper'></img>
                 <section className='desktop-contents'>
-                    <StatusBar />
-                    <ClientLayout apps={this.props.apps} />
+                    {panel}
+                    {clients}
                 </section>
                 {rofi}
             </article>

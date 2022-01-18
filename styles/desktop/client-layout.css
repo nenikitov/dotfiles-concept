@@ -41,7 +41,7 @@
     width: auto;
 
     /* Background blur */
-    backdrop-filter: blur(25px);
+    backdrop-filter: blur(var(--background-blur));
 }
 .client-border {
     /* Borders */

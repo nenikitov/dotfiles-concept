@@ -43,9 +43,14 @@ class Client extends React.Component {
     }
 
     render() {
+        const titlebar =
+            this.props.enableTitleBars ?
+            <TitleBar client={this.props.client} />
+            : null;
+
         return (
             <article className='client client-border'>
-                <TitleBar client={this.props.client} />
+                {titlebar}
                 <Contents client={this.props.client} />
             </article>
         );
@@ -61,7 +66,7 @@ export class ClientLayout extends React.Component {
         const generateClient = (client, index) => {
             if (client.contents) {
                 return (
-                    <Client client={client} key={index} />
+                    <Client client={client} key={index} enableTitleBars={this.props.enableTitleBars} />
                 );
             }
         };

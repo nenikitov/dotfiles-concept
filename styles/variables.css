@@ -48,5 +48,6 @@
     --window-radius: 8px;
     --border-outside: 2px;
     --border-inside: 1px;
+    --background-blur: 10px;
     /* #endregion */
 }
