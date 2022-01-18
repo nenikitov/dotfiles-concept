@@ -38,19 +38,11 @@ export class Desktop extends React.Component {
         super(props);
         this.state = {
             elements: {
-                panel: true,
-                rofi: true,
+                panel: false,
+                rofi: false,
                 titlebars: true
             },
-            clients: [
-                [
-                    firefoxApp
-                ],
-                [
-                    alacrittyApp,
-                    alacrittyApp
-                ]
-            ],
+            clientLayout: 1,
             wallpaper: 'resources/backgrounds/Autumn.jpg'
         }
     }
@@ -87,9 +79,9 @@ export class Desktop extends React.Component {
             elements: elements
         });
     }
-    setClients = (clients) => {
+    setClientLayout = (clientLayout) => {
         this.setState({
-            clients: clients
+            clientLayout: clientLayout
         });
     }
     setWallpaper = (wallpaper) => {
@@ -117,7 +109,7 @@ export class Desktop extends React.Component {
                 <section className='desktop-contents-container'>
                     {panel}
                     <ClientLayout
-                        clients={this.state.clients}
+                        clients={layouts[this.state.clientLayout].clients}
                         titlebars={this.state.elements.titlebars}
                     />
                 </section>
@@ -125,11 +117,13 @@ export class Desktop extends React.Component {
                 <section className='preview-settings-container'>
                     <PreviewSettings
                         layouts={layouts}
+                        elements={this.state.elements}
+                        clientLayout={this.state.clientLayout}
                         setShowPanel={this.setShowPanel}
                         setShowTitlebars={this.setShowTitlebars}
                         setShowRofi={this.setShowRofi}
                         setShowClients={this.setShowClients}
-                        setClients={this.setClients}
+                        setClientLayout={this.setClientLayout}
                         setWallpaper={this.setWallpaper}
                     />
                 </section>

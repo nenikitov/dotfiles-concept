@@ -41,7 +41,7 @@ export class PreviewSettings extends React.Component {
                         {/* Show panel */}
                         <input
                             type='checkbox' id='show-panel' name='show-panel'
-                            defaultChecked={true}
+                            defaultChecked={this.props.elements.panel}
                             onChange={(e) => this.props.setShowPanel(e.target.checked)}
                         />
                         <label htmlFor='show-panel'>Panel</label>
@@ -49,7 +49,7 @@ export class PreviewSettings extends React.Component {
                         {/* Show rofi */}
                         <input
                             type='checkbox' id='show-rofi' name='show-rofi'
-                            defaultChecked={true}
+                            defaultChecked={this.props.elements.rofi}
                             onChange={(e) => this.props.setShowRofi(e.target.checked)}
                         />
                         <label htmlFor='show-rofi'>Rofi</label>
@@ -57,7 +57,7 @@ export class PreviewSettings extends React.Component {
                         {/* Show title bars */}
                         <input
                             type='checkbox' id='show-titlebars' name='show-titlebars'
-                            defaultChecked={true}
+                            defaultChecked={this.props.elements.titlebars}
                             onChange={(e) => this.props.setShowTitlebars(e.target.checked)}
                         />
                         <label htmlFor='show-titlebars'>Title bars</label>
@@ -67,7 +67,11 @@ export class PreviewSettings extends React.Component {
                         <legend>Other</legend>
                         {/* Opened clients */}
                         <label htmlFor='client-layout'>Clients: </label>
-                        <select name='client-layout' id='client-layout'>
+                        <select
+                            name='client-layout' id='client-layout'
+                            value={this.props.clientLayout}
+                            onChange={(e) => this.props.setClientLayout(e.target.value) }
+                        >
                             {this.props.layouts?.map?.(
                                 (layout, index) =>
                                     <option key={index} value={index}>{layout.name}</option>
