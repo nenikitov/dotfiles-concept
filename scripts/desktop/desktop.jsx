@@ -1,5 +1,6 @@
 import { StatusBar } from 'scripts/desktop/status-bar.jsx';
 import { ClientLayout } from 'scripts/desktop/client-layout.jsx';
+import { PreviewSettings } from 'scripts/desktop/preview-settings.jsx';
 
 import { alacrittyApp } from 'apps/alacritty.jsx';
 import { firefoxApp } from 'apps/firefox.jsx';
@@ -16,7 +17,7 @@ export class Desktop extends React.Component {
                 rofi: true,
                 clients: true
             },
-            apps: [
+            clients: [
                 [
                     firefoxApp
                 ],
@@ -29,20 +30,59 @@ export class Desktop extends React.Component {
         }
     }
 
+    setShowPanel = (show) => {
+        let elements = this.state.elements;
+        elements.panel = show;
+
+        this.setState({
+            elements: elements
+        });
+    }
+    setShowTitlebars = (show) => {
+        let elements = this.state.elements;
+        elements.titlebars = show;
+
+        this.setState({
+            elements: elements
+        });
+    }
+    setShowRofi = (show) => {
+        let elements = this.state.elements;
+        elements.rofi = show;
+
+        this.setState({
+            elements: elements
+        });
+    }
+    setShowClients = (show) => {
+        let elements = this.state.elements;
+        elements.clients = show;
+
+        this.setState({
+            elements: elements
+        });
+    }
+    setClients = (clients) => {
+        this.setState({
+            clients: clients
+        });
+    }
+    setWallpaper = (wallpaper) => {
+        this.setState({
+            wallpaper: wallpaper
+        });
+    }
+
     render() {
         const rofi =
             this.state.elements.rofi ?
-            (
-                <section className='rofi-container client client-border'>
-                    {rofiApp.contents}
-                </section>
-            )
+                rofiApp.contents
             : null;
 
         const clients =
             this.state.elements.clients ?
             <ClientLayout
-                apps={this.state.apps}
+                clients={this.state.clients}
                 titlebars={this.state.elements.titlebars}
             />
             : null;
@@ -55,11 +95,16 @@ export class Desktop extends React.Component {
         return (
             <article className='desktop'>
                 <img src={this.state.wallpaper} className='desktop-wallpaper'></img>
-                <section className='desktop-contents'>
+                <section className='desktop-contents-container'>
                     {panel}
                     {clients}
                 </section>
-                {rofi}
+                <section className='rofi-container client client-border'>
+                    {rofi}
+                </section>
+                <section className='preview-settings-container'>
+                    <PreviewSettings />
+                </section>
             </article>
         );
     }

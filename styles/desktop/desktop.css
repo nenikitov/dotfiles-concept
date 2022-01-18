@@ -9,7 +9,7 @@
     width: auto;
     height: auto;
 }
-.desktop-contents {
+.desktop-contents-container {
     /* Font */
     font-family: 'Jost*', sans-serif;
 
@@ -30,5 +30,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.preview-settings-container {
+    /* Layout */
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 /* #endregion */
