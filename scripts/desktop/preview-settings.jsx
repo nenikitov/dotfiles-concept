@@ -41,7 +41,8 @@ export class PreviewSettings extends React.Component {
                         {/* Show panel */}
                         <input
                             type='checkbox' id='show-panel' name='show-panel'
-                            defaultChecked={true} onChange={(e) => this.props.showPanel(e.target.value)}
+                            defaultChecked={true}
+                            onChange={(e) => this.props.setShowPanel(e.target.checked)}
                         />
                         <label htmlFor='show-panel'>Panel</label>
                         <br />
@@ -49,6 +50,7 @@ export class PreviewSettings extends React.Component {
                         <input
                             type='checkbox' id='show-rofi' name='show-rofi'
                             defaultChecked={true}
+                            onChange={(e) => this.props.setShowRofi(e.target.checked)}
                         />
                         <label htmlFor='show-rofi'>Rofi</label>
                         <br />
@@ -56,6 +58,7 @@ export class PreviewSettings extends React.Component {
                         <input
                             type='checkbox' id='show-titlebars' name='show-titlebars'
                             defaultChecked={true}
+                            onChange={(e) => this.props.setShowTitlebars(e.target.checked)}
                         />
                         <label htmlFor='show-titlebars'>Title bars</label>
                         <br />

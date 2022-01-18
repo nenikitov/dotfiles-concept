@@ -101,7 +101,9 @@ export class Desktop extends React.Component {
     render() {
         const rofi =
             this.state.elements.rofi ?
-                rofiApp.contents
+            <section className='rofi-container client client-border'>
+                {rofiApp.contents}
+            </section>
             : null;
 
         const panel =
@@ -119,11 +121,17 @@ export class Desktop extends React.Component {
                         titlebars={this.state.elements.titlebars}
                     />
                 </section>
-                <section className='rofi-container client client-border'>
-                    {rofi}
-                </section>
+                {rofi}
                 <section className='preview-settings-container'>
-                    <PreviewSettings layouts={layouts}/>
+                    <PreviewSettings
+                        layouts={layouts}
+                        setShowPanel={this.setShowPanel}
+                        setShowTitlebars={this.setShowTitlebars}
+                        setShowRofi={this.setShowRofi}
+                        setShowClients={this.setShowClients}
+                        setClients={this.setClients}
+                        setWallpaper={this.setWallpaper}
+                    />
                 </section>
             </article>
         );
