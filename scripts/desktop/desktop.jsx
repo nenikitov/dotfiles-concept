@@ -18,6 +18,12 @@ const layouts = [
         ]
     },
     {
+        name: 'Full Firefox',
+        clients: [
+            [ firefoxApp ]
+        ]
+    },
+    {
         name: 'Firefox and terminal',
         clients: [
             [ firefoxApp ],
