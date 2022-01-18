@@ -24,4 +24,11 @@
     display: flex;
     flex-direction: column;
 }
+.rofi-container {
+    /* Layout */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 /* #endregion */

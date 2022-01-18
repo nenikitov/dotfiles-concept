@@ -2,10 +2,9 @@
 
 import { alacrittyApp } from 'apps/alacritty.jsx';
 import { firefoxApp } from 'apps/firefox.jsx';
-import { rofiApp } from 'apps/rofi.jsx';
 import { Desktop } from 'desktop.jsx';
 
-const wallpaper = './resources/backgrounds/Autumn.jpg';
+const wallpaper = 'resources/backgrounds/Autumn.jpg';
 const elements = {
     panel: true,
     titlebars: true,
@@ -17,8 +16,8 @@ const apps = [
         firefoxApp,
     ],
     [
-        rofiApp,
         alacrittyApp,
+        alacrittyApp
     ]
 ]
 
