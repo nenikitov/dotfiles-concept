@@ -44,7 +44,7 @@ class Client extends React.Component {
 
     render() {
         const titlebar =
-            this.props.enableTitleBars ?
+            this.props.titlebars ?
             <TitleBar client={this.props.client} />
             : null;
 
@@ -66,7 +66,7 @@ export class ClientLayout extends React.Component {
         const generateClient = (client, index) => {
             if (client.contents) {
                 return (
-                    <Client client={client} key={index} enableTitleBars={this.props.enableTitleBars} />
+                    <Client client={client} key={index} titlebars={this.props.titlebars} />
                 );
             }
         };
