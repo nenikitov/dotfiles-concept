@@ -50,17 +50,17 @@
     box-shadow:
         inset
             0px
-            var(--border-inside)
+            calc(2 * var(--border-inside))
             0
             rgba(var(--term-raw-bright-white), 1),
         inset
-            var(--border-inside)
-            var(--border-inside)
+            calc(2 * var(--border-inside))
+            calc(2 * var(--border-inside))
             0
             rgba(var(--term-raw-bright-white), 0.1),
         inset
-            calc(-1 * var(--border-inside))
-            calc(-1 * var(--border-inside))
+            calc(-2 * var(--border-inside))
+            calc(-2 * var(--border-inside))
             0
             rgba(var(--term-raw-bright-white), 0.1);
 }
