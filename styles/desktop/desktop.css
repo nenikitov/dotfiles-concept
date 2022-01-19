@@ -11,7 +11,7 @@
 }
 .desktop-contents-container {
     /* Font */
-    font-family: 'Jost*', sans-serif;
+    font-family: 'Jost', sans-serif;
 
     /* Layout (can be placed on top of the wallpaper) */
     position: absolute;
