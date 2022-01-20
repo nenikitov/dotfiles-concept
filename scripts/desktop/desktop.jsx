@@ -44,7 +44,7 @@ export class Desktop extends React.Component {
         super(props);
         this.state = {
             elements: {
-                panel: false,
+                panel: true,
                 rofi: false,
                 titlebars: true
             },
