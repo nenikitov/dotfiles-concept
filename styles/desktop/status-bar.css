@@ -1,18 +1,28 @@
 .status-bar {
-    display: flex;
-    color: white;
     margin-top: var(--window-gap);
+    padding: 0.1em 0.5em;
+    display: flex;
+    align-items: stretch;
     margin-left: 5%;
     margin-right: 5%;
-    margin-bottom: 0;
 }
-
-.status-bar .status-bar-section {
+.status-bar-section {
     display: flex;
+    gap: var(--window-gap);
+}
+.status-bar-section.section-left {
+    flex: 1;
+}
+.status-bar-section.section-center {
+    text-align: center;
+}
+.status-bar-section.section-right {
+    flex: 1;
+    justify-content: flex-end;
 }
 
-.status-bar .section-center {
-    flex: 1;
-    text-align: center;
-    width: 100%;
+.status-bar-section .status-bar-widget {
+    background-color: rgba(var(--term-raw-primary-background), var(--term-raw-opacity));
+    padding: 0 0.25em;
+    color: var(--term-primary-foreground);
 }

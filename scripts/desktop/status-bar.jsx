@@ -5,7 +5,7 @@ class StatusbarWidget extends React.Component {
 
     render() {
         return (
-            <section className='statusbar-widget'>
+            <section className='status-bar-widget client client-border'>
                 {this.props.contents}
             </section>
         );
