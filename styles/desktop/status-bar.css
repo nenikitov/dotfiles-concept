@@ -1,0 +1,18 @@
+.status-bar {
+    display: flex;
+    color: white;
+    margin-top: var(--window-gap);
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 0;
+}
+
+.status-bar .status-bar-section {
+    display: flex;
+}
+
+.status-bar .section-center {
+    flex: 1;
+    text-align: center;
+    width: 100%;
+}

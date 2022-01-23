@@ -25,7 +25,7 @@ class StatusbarSection extends React.Component {
         )
 
         return (
-            <article className={`statusbar-section section-${this.props.name}`}>
+            <article className={`status-bar-section section-${this.props.name}`}>
                 {widgetElements}
             </article>
         );
@@ -46,6 +46,21 @@ export class StatusBar extends React.Component {
                         'launcher',
                         'rofi',
                         'tags',
+                    ]}
+                />
+                <StatusbarSection
+                    name='center'
+                    widgets={[
+                        'tasks'
+                    ]}
+                />
+                <StatusbarSection
+                    name='right'
+                    widgets={[
+                        'clock',
+                        'keyboard',
+                        'notifications',
+                        'settings'
                     ]}
                 />
             </article>
