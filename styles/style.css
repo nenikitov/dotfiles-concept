@@ -6,6 +6,10 @@
     font-family: 'Jost';
     src: url('../fonts/Jost.otf');
 }
+@font-face {
+    font-family: 'Font Awesome';
+    src: url('../fonts/fontAwesome.otf');
+}
 
 html {
     background-color: black;
